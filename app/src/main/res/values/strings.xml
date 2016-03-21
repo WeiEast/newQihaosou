@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">企好搜</string>
+
+    <!--menu-->
+    <string name="menu_search">企业查询</string>
+    <string name="menu_share">APP分享</string>
+    <string name="menu_comment">给个好评,亲</string>
+    <string name="menu_user">个人中心</string>
+    <string name="menu_setting">设置</string>
+    <string name="menu_theme">夜间</string>
+    <string name="unlogin">未登录</string>
+    <string name="drawer_open">打开</string>
+    <string name="drawer_closed">关闭</string>
+</resources>
