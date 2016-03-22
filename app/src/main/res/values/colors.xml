@@ -23,6 +23,7 @@
     <color name="color_primary_dark">#f57c00</color>
     <color name="title_bg_color">#FE9221</color>
 
+    <color name="main_orange">@color/title_bg_color</color>
     <color name="main_green">#40AA53</color>
     <color name="main_gray">#9A9A9A</color>
     <color name="main_black">#333</color>
@@ -34,4 +35,8 @@
     <color name="divider_line_color">#DDDDDD</color>
     <color name="list_item_background_normal">#ffffff</color>
     <color name="list_item_background_pressed">#F1F1F1</color>
+
+    <color name="base_text_color">#666666</color>
+    <color name="light_text_color">#999999</color>
+    <color name="gray_text_color">#BDBDBD</color>
 </resources>

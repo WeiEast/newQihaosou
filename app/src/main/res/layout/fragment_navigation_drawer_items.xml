@@ -49,7 +49,7 @@
             android:orientation="vertical"
             >
             <LinearLayout
-                android:id="@+id/menu_item_quests"
+                android:id="@+id/menu_item_search"
                 style="@style/MenuItemLayoutStyle" >
 
                 <ImageView
@@ -67,7 +67,7 @@
                 style="@style/h_line" />
 
             <LinearLayout
-                android:id="@+id/menu_item_opensoft"
+                android:id="@+id/menu_item_share"
                 style="@style/MenuItemLayoutStyle" >
 
                 <ImageView
@@ -84,7 +84,7 @@
                 style="@style/h_line" />
 
             <LinearLayout
-                android:id="@+id/menu_item_blog"
+                android:id="@+id/menu_item_com"
                 style="@style/MenuItemLayoutStyle" >
 
                 <ImageView
@@ -101,7 +101,7 @@
                 style="@style/h_line" />
 
             <LinearLayout
-                android:id="@+id/menu_item_gitapp"
+                android:id="@+id/menu_item_user"
                 style="@style/MenuItemLayoutStyle" >
 
                 <ImageView

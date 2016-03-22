@@ -1,4 +1,4 @@
-package com.qihaosou.ui.baseactivity;
+package com.qihaosou.ui.base;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -17,10 +17,10 @@ import butterknife.ButterKnife;
  * Date:on 2016/3/21
  * Description:
  */
-public class BaseActivity extends AppCompatActivity implements BaseViewInterface{
+public abstract class BaseActivity extends AppCompatActivity implements BaseViewInterface{
     protected LayoutInflater mInflater;
 
-    private Toolbar mActionBar;
+    protected Toolbar mActionBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +31,7 @@ public class BaseActivity extends AppCompatActivity implements BaseViewInterface
         if (getLayoutId() != 0) {
             setContentView(getLayoutId());
         }
-       // mActionBar = (Toolbar) findViewById(R.id.actionBar);//getSupportActionBar();
+        mActionBar = (Toolbar) findViewById(R.id.common_toolbar);//getSupportActionBar();
         mInflater = getLayoutInflater();
         if (hasActionBar()) {
             initActionBar(mActionBar);
@@ -43,22 +43,11 @@ public class BaseActivity extends AppCompatActivity implements BaseViewInterface
         initData();
     }
 
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initData() {
-
-    }
     protected void onBeforeSetContentLayout() {}
     protected boolean hasActionBar() {
         return true;
     }
-    protected int getLayoutId() {
-        return 0;
-    }
+    protected abstract int getLayoutId();
     protected boolean hasBackButton() {
         return false;
     }

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">企好搜</string>
 
+    <string name="loading">加载中...</string>
+
     <!--menu-->
     <string name="menu_search">企业查询</string>
     <string name="menu_share">APP分享</string>
@@ -11,4 +13,30 @@
     <string name="unlogin">未登录</string>
     <string name="drawer_open">打开</string>
     <string name="drawer_closed">关闭</string>
+
+    <!--share-->
+    <string name="share_pyq">朋友圈</string>
+    <string name="share_wx">微信</string>
+    <string name="share_qq">QQ</string>
+    <string name="share_kj">QQ空间</string>
+
+    <!-- HomeFragment  企业查询-->
+    <string name="search_advanced">高级搜索</string>
+    <string name="search_patent">搜专利</string>
+    <string name="search_mark">搜商标</string>
+    <string name="search_shesu">搜涉诉</string>
+
+
+    <!-- Error View -->
+    <string name="error_view_click_to_refresh">点击屏幕,重新加载</string>
+    <string name="error_view_no_data">暂无内容</string>
+    <string name="error_view_loading">加载中…</string>
+    <string name="error_view_load_error_click_to_refresh">内容加载失败\r\n点击重新加载</string>
+    <string name="error_view_network_error_click_to_refresh">没有可用的网络</string>
+    <string name="tip_network_error">没有可用的网络</string>
+
+
+    <string name="actionbar_title_search">搜索</string>
+    <string name="history_search">历史搜索</string>
+    <string name="my_collect">我的关注</string>
 </resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="begin_search">
+        <item>@string/history_search</item>
+        <item>@string/my_collect</item>
+    </string-array>
+</resources>
