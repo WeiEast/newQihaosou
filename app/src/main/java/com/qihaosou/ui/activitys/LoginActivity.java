@@ -12,6 +12,7 @@ import com.lzy.okhttputils.request.BaseRequest;
 import com.qihaosou.R;
 import com.qihaosou.interf.MyTextWacher;
 import com.qihaosou.ui.base.BaseActivity;
+import com.qihaosou.util.L;
 import com.qihaosou.util.UIHelper;
 import com.umeng.socialize.UMAuthListener;
 import com.umeng.socialize.UMShareAPI;
@@ -109,7 +110,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         public void onComplete(SHARE_MEDIA platform, int action, Map<String, String> data) {
 //            if(platform==SHARE_MEDIA.QQ){
                 ToastUtil.TextToast(getApplicationContext(), action+"Authorize succeed");
-                L.e("........:"+data.toString());
+                L.e(data.toString());
 //            }
         }
 
