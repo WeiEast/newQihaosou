@@ -28,8 +28,8 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         if (!hasActionBar()) {
             // supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         }
-        if (getLayoutId() != 0) {
-            setContentView(getLayoutId());
+        if (getContentViewLayoutID() != 0) {
+            setContentView(getContentViewLayoutID());
         }
         mActionBar = (Toolbar) findViewById(R.id.common_toolbar);//getSupportActionBar();
         mInflater = getLayoutInflater();
@@ -47,7 +47,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     protected boolean hasActionBar() {
         return true;
     }
-    protected abstract int getLayoutId();
+    protected abstract int getContentViewLayoutID();
     protected boolean hasBackButton() {
         return false;
     }

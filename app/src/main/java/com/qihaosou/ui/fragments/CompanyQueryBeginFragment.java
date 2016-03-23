@@ -20,6 +20,7 @@ public class CompanyQueryBeginFragment extends BaseViewPagerFragment {
                 null);
         adapter.addTab(title[1], "search_collect", DemoFragment.class,
                 null);
+        adapter.notifyDataSetChanged();
     }
 
 

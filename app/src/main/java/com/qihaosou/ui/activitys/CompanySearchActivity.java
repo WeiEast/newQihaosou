@@ -24,6 +24,11 @@ public class CompanySearchActivity extends BaseActivity {
     }
 
     @Override
+    protected boolean hasBackButton() {
+        return true;
+    }
+
+    @Override
     public void initData() {
 
     }

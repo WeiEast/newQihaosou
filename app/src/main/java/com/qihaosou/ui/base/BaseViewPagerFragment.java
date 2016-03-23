@@ -9,7 +9,8 @@ import android.view.ViewGroup;
 import com.qihaosou.R;
 import com.qihaosou.adapter.ViewPageFragmentAdapter;
 import com.qihaosou.ui.empty.EmptyLayout;
-import com.qihaosou.widget.PagerSlidingTabStrip;
+import com.qihaosou.ui.fragments.DemoFragment;
+import com.qihaosou.widget.SlidingTabLayout;
 
 
 /**
@@ -21,7 +22,7 @@ import com.qihaosou.widget.PagerSlidingTabStrip;
  */
 public abstract class BaseViewPagerFragment extends BaseFragment {
 
-    protected PagerSlidingTabStrip mTabStrip;
+    protected SlidingTabLayout mTabStrip;
     protected ViewPager mViewPager;
     protected ViewPageFragmentAdapter mTabsAdapter;
     protected EmptyLayout mErrorLayout;
@@ -33,15 +34,21 @@ public abstract class BaseViewPagerFragment extends BaseFragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        mTabStrip = (PagerSlidingTabStrip) view
+        mTabStrip = (SlidingTabLayout) view
                 .findViewById(R.id.pager_tabstrip);
-
         mViewPager = (ViewPager) view.findViewById(R.id.pager);
-
         mErrorLayout = (EmptyLayout) view.findViewById(R.id.error_layout);
 
-        mTabsAdapter = new ViewPageFragmentAdapter(getChildFragmentManager(),
-                mTabStrip, mViewPager);
+        mTabsAdapter = new ViewPageFragmentAdapter(getChildFragmentManager(),mViewPager);
+        mTabStrip.setDistributeEvenly(true);
+        mTabStrip.setCustomTabView(R.layout.base_viewpage_fragment_tab_item, R.id.tv_text);
+        mTabStrip.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
+            @Override
+            public int getIndicatorColor(int position) {
+                return getResources().getColor(R.color.title_bg_color);
+            }
+        });
+        mTabStrip.setViewPager(mViewPager);
         setScreenPageLimit();
         onSetupTabAdapter(mTabsAdapter);
         // if (savedInstanceState != null) {
